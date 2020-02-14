@@ -1,4 +1,4 @@
-# Events Reconciler
+# node-babel-boilerplate
 
 Minimal boilercode to kickstart your Node.js project using Babel and ES6.
 
