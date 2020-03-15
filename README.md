@@ -18,7 +18,7 @@ Before running the project on your system, make sure you have the following soft
 Before running the program make sure you have the `.env` file in the root directory of the project.
 
 ```
-VALUE="<CHANGEME>"
+PORT="<CHANGEME>"
 ```
 
 The program can be run in "development" mode for testing and development purposes using the following command:
@@ -59,6 +59,7 @@ docker run -it <<CHANGEME>>
 
 - [Babel](https://babeljs.io) - Compile JavaScript to a primitive version
 - [Docker](https://docker.com) - OS level virtualization
+- [Koa](https://koajs.com) - Next generation web framework for Node.js
 
 ## Authors
 

@@ -11,5 +11,5 @@ if (fs.existsSync('.env')) {
 }
 
 export default {
-  key: String(process.env.VALUE),
+  port: Number(process.env.PORT) || 3000,
 };
