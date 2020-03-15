@@ -1,10 +1,14 @@
 import qs from 'querystring';
 import * as axios from 'axios';
 
-export const doGet = (url, params = {}) =>
+export const doGet = (
+  url,
+  params = {},
+  headers = { 'Content-Type': 'application/json' },
+) =>
   new Promise((resolve, reject) =>
     axios.default
-      .get(`${url}?${qs.stringify(params)}`)
+      .get(`${url}?${qs.stringify(params)}`, { headers })
       .then(res => {
         if (res.status >= 200 && res.status < 300) {
           resolve(res.data);
@@ -22,7 +26,7 @@ export const doPost = (
 ) =>
   new Promise((resolve, reject) =>
     axios.default
-      .post(url, JSON.stringify(body), { headers })
+      .post(url, body, { headers })
       .then(res => {
         if (res.status >= 200 && res.status < 300) {
           resolve();
