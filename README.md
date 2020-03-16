@@ -46,13 +46,13 @@ yarn start
 Or build the Docker image using the following command:
 
 ```
-docker build -t <<CHANGEME>>> .
+docker build -t node-babel-boilerplate .
 ```
 
 And run the container using the following command:
 
 ```
-docker run -it <<CHANGEME>>
+docker run node-babel-boilerplate
 ```
 
 ## Technologies
@@ -63,7 +63,7 @@ docker run -it <<CHANGEME>>
 
 ## Authors
 
-- **Wahaj Aayani** - _Initial work_ - [aayani](https://gitlab.com/aayani)
+- **Wahaj Aayani** - _Initial work_ - [aayani](https://github.com/aayani)
 
 ## License
 
