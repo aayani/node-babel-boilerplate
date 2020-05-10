@@ -9,7 +9,7 @@ export const doGet = (
   new Promise((resolve, reject) =>
     axios.default
       .get(`${url}?${qs.stringify(params)}`, { headers })
-      .then(res => {
+      .then((res) => {
         if (res.status >= 200 && res.status < 300) {
           resolve(res.data);
         }
@@ -27,7 +27,7 @@ export const doPost = (
   new Promise((resolve, reject) =>
     axios.default
       .post(url, body, { headers })
-      .then(res => {
+      .then((res) => {
         if (res.status >= 200 && res.status < 300) {
           resolve();
         }

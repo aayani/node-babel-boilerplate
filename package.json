@@ -7,10 +7,9 @@
     "build": "npm-run-all clean compile",
     "clean": "rimraf dist",
     "compile": "babel src --out-dir dist",
-    "format": "eslint src* --fix",
-    "start": "cross-env NODE_ENV=production node dist/main.js",
-    "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/main.js",
-    "start:prod": "cross-env NODE_ENV=production npm-run-all clean compile start"
+    "lint": "eslint src* --quiet --fix",
+    "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node -r dotenv/config src/main.js",
+    "start:prod": "cross-env NODE_ENV=production node -r dotenv/config dist/main.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
