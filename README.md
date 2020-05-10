@@ -37,10 +37,10 @@ Build the project using the following command:
 yarn build
 ```
 
-The project can be run in local environment using:
+The project can be run in production environment using:
 
 ```
-yarn start
+yarn start:prod
 ```
 
 Or build the Docker image using the following command:

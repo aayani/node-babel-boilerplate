@@ -1,5 +1,3 @@
-import 'regenerator-runtime/runtime';
-
 import server from './koa';
 import config from './config';
 import logger from './utils/logger';
