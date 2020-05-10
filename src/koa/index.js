@@ -23,6 +23,4 @@ router.get('/', async (ctx) => {
   ctx.body = 'Welcome to node-babel-boilerplate web service';
 });
 
-export default {
-  listen: (port) => new Promise((resolve) => app.listen(port, resolve)),
-};
+export default app;
