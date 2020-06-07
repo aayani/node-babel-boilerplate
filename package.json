@@ -7,9 +7,10 @@
     "build": "npm-run-all clean compile",
     "clean": "rimraf dist",
     "compile": "babel src --out-dir dist",
-    "lint": "eslint src* __tests__* --quiet --fix",
-    "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node -r dotenv/config src/main.js",
-    "start:prod": "cross-env NODE_ENV=production node -r dotenv/config dist/main.js",
+    "lint": "eslint src/* __tests__/* --quiet --fix",
+    "start": "node -r dotenv/config bin/www",
+    "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node -r dotenv/config bin/www",
+    "start:prod": "cross-env NODE_ENV=production node -r dotenv/config bin/www",
     "test": "jest",
     "test:cov": "jest --coverage"
   },

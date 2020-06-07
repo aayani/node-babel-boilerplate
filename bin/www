@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+const http = require('http');
+
+const dir = '../dist'; // process.env.NODE_ENV === 'development' ? '../src' : '../dist';
+
+const { getHttpServer } = require(`${dir}/app`);
+const { default: config } = require(`${dir}/config`);
+const { default: logger } = require(`${dir}/utils/logger`);
+
+const app = getHttpServer();
+
+const server = http.createServer(app);
+server.listen(config.port);
+logger.info(
+  `🚀  Http Server running at http://localhost:${config.port} in "${process.env.NODE_ENV}" mode`,
+  'bin/www',
+);
