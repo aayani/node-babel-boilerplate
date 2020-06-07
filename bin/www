@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const http = require('http');
 
-const dir = '../dist'; // process.env.NODE_ENV === 'development' ? '../src' : '../dist';
+const dir = process.env.NODE_ENV === 'development' ? '../src' : '../dist';
 
 const { getHttpServer } = require(`${dir}/app`);
 const { default: config } = require(`${dir}/config`);
