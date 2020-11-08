@@ -1,7 +1,7 @@
 import express from 'express';
 import { OK } from 'http-status-codes';
 
-import { authorize, authenticate } from './middleware/auth';
+import { authorize, authenticate } from './lib/middleware/auth';
 
 export const AuthRouter = express.Router();
 

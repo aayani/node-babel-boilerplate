@@ -6,8 +6,8 @@ import {
 } from 'http-status-codes';
 import jwt from 'jsonwebtoken';
 
-import config from '../../config';
-import logger from '../../utils/logger';
+import config from '../../../config';
+import logger from '../../../utils/logger';
 
 export const authorize = async (req, res) => {
   try {
